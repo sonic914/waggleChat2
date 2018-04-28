@@ -4,7 +4,19 @@
 </head>
 
 <body>
-
+{{> chatMain}}
 </body>
+
+<template name="chatMain">
+  <div class="container">
+    <!--loginButtons-->
+    <p>{{> loginButtons}}</p>
+    <!--createRoom-->
+    <p>{{> createRoom}}</p>
+    <!--roomList-->
+    <p>{{> roomList}}</p>
+  </div>
+</template>
+
 
 
