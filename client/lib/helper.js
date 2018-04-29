@@ -5,8 +5,8 @@ Template.registerHelper ("currentMode", () => {
     return Session.get("viewMode");
 });
 
-Template.registerHelper ("ago", (timestemp)=>{
-    return Session.get('localtime') && moment(timestemp).fromNow();
+Template.registerHelper ("ago", (timestamp) => {
+    return Session.get("localtime") && moment(timestamp).fromNow();
 });
 
 Meteor.startup(()=>{
