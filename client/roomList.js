@@ -13,3 +13,10 @@ Template.roomList.helpers ({
         return Rooms.find();
     }
 });
+
+Template.roomList.events ({
+    "click a[name=selectRoom]" () {
+        Session.set("viewMode", "chatRoom");
+        Session.set("currentRoom", this._id);
+    }
+});
