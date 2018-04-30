@@ -4,7 +4,11 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 {{> chatMain}}
+=======
+{{> Template.dynamic template=currentMode}}
+>>>>>>> a9ef17fb6291934005c7bcdd0e0a3b6f6b2b6bee
 </body>
 
 <template name="chatMain">
@@ -14,7 +18,23 @@
     <!--createRoom-->
     <p>{{> createRoom}}</p>
     <!--roomList-->
+<<<<<<< HEAD
   </div>
 </template>
 
+=======
+    <p>{{> roomList}}</p>
+  </div>
+</template>
+
+<template name="chatRoom">
+  <div class="panel">
+    {{> roomHeader}}
+    {{> messageList}}
+    {{> messageInput}}
+  </div>
+</template>
+
+
+>>>>>>> a9ef17fb6291934005c7bcdd0e0a3b6f6b2b6bee
 
