@@ -24,7 +24,8 @@ Template.messageInput.onCreated(function() {
             username: Meteor.user().username,
             email: Meteor.user().emails[0].address
         };
-        Messages.insert(messageObj);
+        //Messages.insert(messageObj);
+        Meteor.call("insertMessage", messageObj);
         console.log(messageObj);
 
         txtBox.value = "";

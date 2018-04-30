@@ -1,6 +1,12 @@
 Template.messageList.onCreated (function() {
     var instance = this;
-    instance.messagesSub = instance.subscribe ("messages", Session.get("currentRoom", 30));
+    Session.set("limit", 30);
+    instance.autorun (function () {
+        instance.messagesSub = instance.subscribe ("messages", 
+        Session.get("currentRoom"),
+        session.get("limit")
+        );
+    });
 });
 
 Template.messageList.onDestroyed (function() {
