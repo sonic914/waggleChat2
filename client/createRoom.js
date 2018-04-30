@@ -1,7 +1,4 @@
 Template.createRoom.events ({
-<<<<<<< HEAD
-
-=======
     "click button[name=saveRoom]" (evt, tmpl) {
         Rooms.insert (
             {
@@ -13,5 +10,4 @@ Template.createRoom.events ({
         );
         tmpl.find("input[name=roomId]").value = "";
     }
->>>>>>> a9ef17fb6291934005c7bcdd0e0a3b6f6b2b6bee
 });
